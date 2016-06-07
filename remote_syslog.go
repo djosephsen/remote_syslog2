@@ -127,5 +127,6 @@ func main() {
 
 	for err = range logger.Errors {
 		log.Errorf("Syslog error: %v", err)
+		os.Exit(42)
 	}
 }
